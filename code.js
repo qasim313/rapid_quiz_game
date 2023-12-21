@@ -8,7 +8,10 @@
 let redScore=0;
 let blueScore =0;
 
-let getQuesion = setInterval( ()=>{
+const questionDiv = document.querySelector("#question")
+
+
+let getQuesion =  ()=>{
 
     let num1 = Math.ceil (Math.random()*201);
     let num2 = Math.ceil (Math.random()*201);
@@ -18,21 +21,21 @@ let getQuesion = setInterval( ()=>{
 
     let result;
     let check = Math.ceil (Math.random()*9);
+    let optionCheck =  Math.ceil (Math.random()*3);
+    let optList = document.createElement('ul');
+    
 
     if (check == 0 ) {
         result = num1+num2+num3;
-
         statement = `${num1} + ${num2} + ${num3}`; 
     } else if ( check == 1 ) {
         result = num1-num2-num3;
         statement = `${num1} - ${num2} - ${num3}`;
     } else if ( check == 2 ) {
         result = num1*num2*num3;
-
         statement = `${num1} * ${num2} * ${num3}`;
     } else if ( check == 3) {
         result = num1*num2+num3;
-
         statement = `${num1} * ${num2} + ${num3}`;
     } else if ( check == 4) {
         result = (num1+num2)*num3;
@@ -56,7 +59,33 @@ let getQuesion = setInterval( ()=>{
         statement = `${num1} + ${num2} - ${num3}`;
     }
 
+
+    // if ( optionCheck == 0 ) {
+    //     li1.textContent = result;
+    //     li2.textContent = result - 10 + Math.ceil (Math.random()*result/2) ;
+    //     li3.textContent = result - Math.ceil (Math.random()*30)+1;
+       
+    // } else if ( optionCheck == 1 ) {
+    //     li2.textContent = result;
+    //     li1.textContent = result - 10 + Math.ceil (Math.random()*result/2) ;
+    //     li3.textContent = result - Math.ceil (Math.random()*30)+1;
+      
+    // } else {
+    //     li3.textContent = result;
+    //     li2.textContent = result - 10 + Math.ceil (Math.random()*result/2) ;
+    //     li1.textContent= result - Math.ceil (Math.random()*30)+1;
+
+    // }
     
-}, 10000);
+    // optList.appendChild(li1);
+    // optList.appendChild(li2);
+    // optList.appendChild(li3);
+
+    questionDiv.innerHTML=statement;
+    // p1.appendChild(optList)
+
+
+
+}
 
 

@@ -1,19 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Quiz Game</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Game</title>
 </head>
 <body>
 
+
     <p id="question"></p>
 
-    <div id="player-1-opt"></div>
+  <div class="container">
+    <div class="player" id="redPlayer">
+      <h2>Red Player</h2>
+      <p>Score: <span id="redScore">0</span></p>
+      <button onclick="checkAnswer('red')" class="opt1"></button>
+      <button onclick="checkAnswer('red')" class="opt1"></button>
+      <button onclick="checkAnswer('red')" class="opt1"></button>
+    </div>
 
-    
+    <div class="player" id="bluePlayer">
+      <h2>Blue Player</h2>
+      <p>Score: <span id="blueScore">0</span></p>
+      
+      <button onclick="checkAnswer('blue')" class="opt1"></button>
+      <button onclick="checkAnswer('blue')" class="opt1"></button>
+      <button onclick="checkAnswer('blue')" class="opt1"></button>
+    </div>
+  </div>
 
-    <script src="code.js"></script>
+  <script src="code.js"></script>
+
 </body>
 </html>
