@@ -7,25 +7,28 @@
 </head>
 <body>
 
+  <button id="start-btn">Press To Start</button>
+
+    
+  <div class="container" style="display: none;">
 
     <p id="question"></p>
 
-  <div class="container">
     <div class="player" id="redPlayer">
       <h2>Red Player</h2>
       <p>Score: <span id="redScore">0</span></p>
-      <button onclick="checkAnswer('red')" class="opt1"></button>
-      <button onclick="checkAnswer('red')" class="opt1"></button>
-      <button onclick="checkAnswer('red')" class="opt1"></button>
+      <button onclick="checkAnswer('red' , this)" class="opt1"></button>
+      <button onclick="checkAnswer('red' , this)" class="opt2"></button>
+      <button onclick="checkAnswer('red', this)" class="opt3"></button>
     </div>
 
     <div class="player" id="bluePlayer">
       <h2>Blue Player</h2>
       <p>Score: <span id="blueScore">0</span></p>
       
-      <button onclick="checkAnswer('blue')" class="opt1"></button>
-      <button onclick="checkAnswer('blue')" class="opt1"></button>
-      <button onclick="checkAnswer('blue')" class="opt1"></button>
+      <button onclick="checkAnswer('blue', this)" class="opt1"></button>
+      <button onclick="checkAnswer('blue', this)" class="opt2"></button>
+      <button onclick="checkAnswer('blue', this)" class="opt3"></button>
     </div>
   </div>
 
